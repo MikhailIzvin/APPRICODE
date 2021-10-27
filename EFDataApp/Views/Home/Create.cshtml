@@ -1,0 +1,21 @@
+﻿@model EFDataApp.Models.VideoGame
+@{
+    ViewBag.Title = "Добавление игры";
+}
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label">Название</label>
+        <input type="text" asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Develop" class="control-label">Разработчик</label>
+        <input type="text" asp-for="Develop" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Genres" class="control-label">Жанры</label>
+        <input type="text" asp-for="Genres" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>

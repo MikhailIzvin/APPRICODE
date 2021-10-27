@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EFDataApp.Models.VideoGame>
+@{
+    ViewBag.Title = "Все игры";
+}
+<a asp-action="Create">Добавить игру</a>
+<table class="table">
+    <tr><td>Игры</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>
+                <a asp-action="Details" asp-controller="Home" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
